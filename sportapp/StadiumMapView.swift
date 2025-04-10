@@ -1,3 +1,11 @@
+//
+//  StadiumMapView.swift
+//  sportapp
+//
+//  Created by noor alotibi on 8/10/1446 AH.
+//
+
+
 
 import SwiftUI
 
@@ -54,7 +62,7 @@ struct StadiumMapView: View {
 
                     Circle()
                         .fill(selectedSeats.contains(where: { $0.id == seat.id }) ? Color.green : seat.category.color)
-                        .frame(width: 22, height: 22)
+                        .frame(width: 26, height: 26)
                         .overlay(Text(seat.number).font(.system(size: 7)).foregroundColor(.white))
                         .position(x: 200 + x, y: 300 + y)
                         .onTapGesture {
@@ -68,25 +76,26 @@ struct StadiumMapView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white)
+        .background(Color.clear)
         
         if !selectedSeats.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
                 Text("المقاعد المختارة:")
                     .font(Font.custom("Tajawal-Regular", size: 14))
-                    .padding(.leading, 272)
-                    .padding(.top, 440)
+                    .padding(.leading, 299)
+//                    .padding(.top, 440)
 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 1) {
                         ForEach(selectedSeats) { seat in
                             Text("\(seat.number)")
-                                .padding(3)
+                            
                                 .background(Color.green)
                                 .foregroundColor(.white)
                                 .cornerRadius(8)
-//                                .padding(.leading, 18)
-//                                .padding(.trailing, -9)
+//
+                                .padding(.bottom,123)
+                                .padding(.leading)
                         }
                     }
                 }
