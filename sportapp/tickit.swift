@@ -213,6 +213,7 @@ struct tickit: View {
 
                
             }
+            
         }
     }
 }

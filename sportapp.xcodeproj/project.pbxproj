@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7956C4382DB968BD0031FF69 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 7956C4372DB968BD0031FF69 /* FirebaseAuth */; };
+		7956C43A2DB968BD0031FF69 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7956C4392DB968BD0031FF69 /* FirebaseFirestore */; };
+		7956C43C2DB968BD0031FF69 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7956C43B2DB968BD0031FF69 /* FirebaseMessaging */; };
+		7956C43E2DB968BD0031FF69 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7956C43D2DB968BD0031FF69 /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		79090F732DA4B64100BB2A01 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +36,40 @@
 		79090F7C2DA4B64100BB2A01 /* sportappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sportappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7956C3C72DB6EF5F0031FF69 /* Exceptions for "sportapp" folder in "sportappTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+				"Jomhuria-Regular.ttf",
+			);
+			target = 79090F712DA4B64100BB2A01 /* sportappTests */;
+		};
+		7956C3C82DB6EF5F0031FF69 /* Exceptions for "sportapp" folder in "sportappUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+				"Jomhuria-Regular.ttf",
+			);
+			target = 79090F7B2DA4B64100BB2A01 /* sportappUITests */;
+		};
+		79BE69262DB6EDF2001D95ED /* Exceptions for "sportapp" folder in "sportapp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 79090F642DA4B64000BB2A01 /* sportapp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		79090F672DA4B64000BB2A01 /* sportapp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				79BE69262DB6EDF2001D95ED /* Exceptions for "sportapp" folder in "sportapp" target */,
+				7956C3C72DB6EF5F0031FF69 /* Exceptions for "sportapp" folder in "sportappTests" target */,
+				7956C3C82DB6EF5F0031FF69 /* Exceptions for "sportapp" folder in "sportappUITests" target */,
+			);
 			path = sportapp;
 			sourceTree = "<group>";
 		};
@@ -52,6 +90,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7956C43C2DB968BD0031FF69 /* FirebaseMessaging in Frameworks */,
+				7956C43E2DB968BD0031FF69 /* FirebaseStorage in Frameworks */,
+				7956C4382DB968BD0031FF69 /* FirebaseAuth in Frameworks */,
+				7956C43A2DB968BD0031FF69 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +154,10 @@
 			);
 			name = sportapp;
 			packageProductDependencies = (
+				7956C4372DB968BD0031FF69 /* FirebaseAuth */,
+				7956C4392DB968BD0031FF69 /* FirebaseFirestore */,
+				7956C43B2DB968BD0031FF69 /* FirebaseMessaging */,
+				7956C43D2DB968BD0031FF69 /* FirebaseStorage */,
 			);
 			productName = sportapp;
 			productReference = 79090F652DA4B64000BB2A01 /* sportapp.app */;
@@ -195,6 +241,9 @@
 			);
 			mainGroup = 79090F5C2DA4B64000BB2A01;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7956C4362DB968BD0031FF69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 79090F662DA4B64000BB2A01 /* Products */;
 			projectDirPath = "";
@@ -400,6 +449,8 @@
 				DEVELOPMENT_TEAM = A7W3PW83NK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sportapp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +479,8 @@
 				DEVELOPMENT_TEAM = A7W3PW83NK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = sportapp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +611,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7956C4362DB968BD0031FF69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7956C4372DB968BD0031FF69 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7956C4362DB968BD0031FF69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		7956C4392DB968BD0031FF69 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7956C4362DB968BD0031FF69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		7956C43B2DB968BD0031FF69 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7956C4362DB968BD0031FF69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		7956C43D2DB968BD0031FF69 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7956C4362DB968BD0031FF69 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 79090F5D2DA4B64000BB2A01 /* Project object */;
 }

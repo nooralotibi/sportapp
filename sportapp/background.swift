@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct background: View {
+struct backstud: View {
     
     @State private var ticketCount: Int = 1
     let ticketPrice = 400
@@ -30,15 +30,19 @@ struct background: View {
 
             Color(red: 217/255, green: 217/255, blue: 217/255)
                 .cornerRadius(15)
-                .padding(20)
+                .padding(5)
             
-            VStack(spacing: -88) {
+            VStack(spacing: -109) {
                 
-                VStack(spacing: 8) {
+                VStack(spacing: 6) {
                     Image("Image")
-                        .padding(.top,4)
+                        .resizable()
+                        .scaledToFit()
+                        .padding(.top,-12)
+                      
+               
                     Image("Image 3")
-                        .padding(.bottom, -36)
+                        .padding(.bottom, -22)
                     HStack(spacing: 24) {
                         VStack {
                             Image("Image 4")
@@ -81,17 +85,18 @@ struct background: View {
                     .foregroundColor(Color(red: 0.22, green: 0.07, blue: 0.28))
       
                     
-                }.padding(.bottom,-24)
+                }.padding(.bottom,-2)
                 
                 StadiumMapView()
-                    .padding(.leading,-10)
+                    .padding(.leading,-12)
+             
                 
                 
                 VStack {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color(red: 56/255, green: 17/255, blue: 72/255), lineWidth: 1)
                         .background(Color.white.cornerRadius(10))
-                        .frame(height: 120)
+                        .frame(height: 100)
                         .overlay(
                             VStack(spacing: 8) {
                                 HStack {
@@ -133,8 +138,8 @@ struct background: View {
                                 }
                             }
                         )
-                }.padding(.bottom,99)
-                    .padding(.horizontal)
+                }.padding(.bottom,100)
+
                 
                 NavigationLink(
                     destination: confirmpay(totalPrice: ticketPrice * ticketCount, ticketsCount: ticketCount),
@@ -148,5 +153,5 @@ struct background: View {
 }
 
 #Preview {
-    background()
+    backstud()
 }
